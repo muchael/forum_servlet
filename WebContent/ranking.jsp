@@ -8,27 +8,29 @@
 <title>Forum - Ranking</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body>
+<body class="container" >
 	<h2>Ranking</h2>
 
-	<table class="table">
-		<tr>
-			<td>Posição</td>
-			<td>Nome</td>
-			<td>Login</td>
-			<td>Pontos</td>
-		</tr>
+	<table class="table table-striped">
+		<thead>
+			<th>Posição</th>
+			<th>Nome</th>
+			<th>Login</th>
+			<th>Pontos</th>
+		</thead>
 
-		<c:forEach items="${ranking}" var="usuario" varStatus="loop">
-			<tr>
-				<td><c:out value="${loop.index + 1}" /></td>
-				<td><c:out value="${usuario.nome}" /></td>
-				<td><c:out value="${usuario.login}" /></td>
-				<td><c:out value="${usuario.pontos}" /></td>
-			</tr>
-		</c:forEach>
+		<tbody>
+			<c:forEach items="${ranking}" var="usuario" varStatus="loop">
+				<tr>
+					<td><c:out value="${loop.index + 1}" /></td>
+					<td><c:out value="${usuario.nome}" /></td>
+					<td><c:out value="${usuario.login}" /></td>
+					<td><c:out value="${usuario.pontos}" /></td>
+				</tr>
+			</c:forEach>
+		</tbody>
 	</table>
 	
-	<a href="listTopicos">Voltar</a>
+	<a href="listTopicos" class="btn btn-default" style="float: right;">Voltar</a>
 </body>
 </html>

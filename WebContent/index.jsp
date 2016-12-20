@@ -7,28 +7,25 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-	<form action="login" method="POST">
-		<div>
-			<div>
+	<div class="container text-center" style="border: 1px solid #ccc; width: 380px; height: 290px;  position: absolute; top: 30%;  left: 38%;">
+		<form action="login" method="POST">
+			<div><h2 style="margin-bottom: 30px;">FÓRUM</h2></div>
+			<div class="form-group">
 				<label><b>Login</b></label>
-				<input type="text"
-					placeholder="Entre com o login" name="login" required>
+				<input type="text" placeholder="Entre com o login" name="login" required>
 			</div>
-			<div> 
+			<div class="form-group">
 				<label><b>Senha</b></label>
-				<input type="password" placeholder="Entre com a senha" name="senha"
-					required>
+				<input type="password" placeholder="Entre com a senha" name="senha" required>
 			</div>
 			<div>
-				<button type="submit">Login</button>
+				<a class="btn btn-default" href="cadastro">Cadastrar usuário</a>
+				<button type="submit" class="btn btn-primary">Login</button>
 			</div>
-			
-			<a href="cadastro">Cadastrar usuário</a>
-			
-			<div>
-				${mensagem}
-			</div>
-		</div>
-	</form>
+
+
+			<div style="margin-top: 25px; color: red;">${mensagem}</div>
+		</form>
+	</div>
 </body>
 </html>

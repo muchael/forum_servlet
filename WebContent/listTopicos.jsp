@@ -8,25 +8,28 @@
 <title>Forum - Listagem de Tópicos</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body>
+<body class="container">
 	<h2>Tópicos</h2>
 
 	<table class="table">
-		<tr>
-			<td>Título</td>
-			<td>Criador</td>
-			<td></td>
-		</tr>
-
-		<c:forEach items="${topicos}" var="topico">
-			<tr>
-				<td><c:out value="${topico.titulo}" /></td>
-				<td><c:out value="${topico.criador.nome}" /></td>
-				<td><a href="topico?id=${ topico.id_topico }">Visualizar</a></td>
-			</tr>
-		</c:forEach>
+		<thead>
+			<th>Título</th>
+			<th>Criador</th>
+			<th></th>
+		</thead>
+		<tbody>
+			<c:forEach items="${topicos}" var="topico">
+				<tr>
+					<td><c:out value="${topico.titulo}" /></td>
+					<td><c:out value="${topico.criador.nome}" /></td>
+					<td><a href="topico?id=${ topico.id_topico }">Visualizar</a></td>
+				</tr>
+			</c:forEach>
+		</tbody>
 	</table>
-	<a href="ranking">Ranking de usuários</a>
-	<a href="criarTopico">Criar tópico</a>
+	<div style="text-align: right;">
+		<a href="ranking" class="btn btn-default">Ranking de usuários</a>
+		<a href="criarTopico" class="btn btn-primary">Criar tópico</a>
+	</div>
 </body>
 </html>
