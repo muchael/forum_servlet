@@ -12,7 +12,7 @@ import entity.Usuario;
 public class UsuarioDAOImplementation implements UsuarioDAO {
 
 	private static final String DB_DRIVER = "org.postgresql.Driver";
-	private static final String DB_CONNECTION = "jdbc:postgresql://127.0.0.1:5432/forum";
+	private static final String DB_CONNECTION = "jdbc:postgresql://127.0.0.1:5432/forum-test";
 	private static final String DB_USER = "forum";
 	private static final String DB_PASSWORD = "forum";
 	

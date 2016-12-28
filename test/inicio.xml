@@ -1,0 +1,7 @@
+<dataset>
+	<usuario login="Marcos" email="marcos@mail.com" nome="Marcos Vieira" senha="asdf" pontos="57" />
+	<usuario login="Pedro" email="pedro@mail.com" nome="Pedro Fagundes" senha="pedro123" pontos="15" />
+	
+	<topico id_topico="1" titulo="Topico 1" conteudo="Conteúdo agregador" login="Pedro" />
+	<comentario id_comentario="1" id_topico="1" comentario="Comentario 1" login="Pedro" />
+</dataset>

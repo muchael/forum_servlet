@@ -1,0 +1,7 @@
+<dataset>
+	<topico id_topico="1" titulo="Topico 1" conteudo="Conteúdo agregador" login="Pedro" />
+	<topico id_topico="2" titulo="Titulo teste" conteudo="Conteúdo teste" login="Pedro" />
+	
+	<usuario login="Marcos" email="marcos@mail.com" nome="Marcos Vieira" senha="asdf" pontos="57" />
+	<usuario login="Pedro" email="pedro@mail.com" nome="Pedro Fagundes" senha="pedro123" pontos="25" />
+</dataset>

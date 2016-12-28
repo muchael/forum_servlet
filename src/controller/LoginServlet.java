@@ -47,7 +47,7 @@ public class LoginServlet extends HttpServlet {
 			
 			request.getSession().setAttribute("usuario", usuario);
 			
-			request.getRequestDispatcher("listTopicos.jsp").forward(request, response);	
+			request.getRequestDispatcher("listTopicos").forward(request, response);	
 		} catch (Exception e) {
 			request.setAttribute( "mensagem", e.getMessage() );
 			request.getRequestDispatcher("index.jsp").forward(request, response);
