@@ -24,7 +24,7 @@
 			</div>
 
 
-			<div style="margin-top: 25px; color: red;">${mensagem}</div>
+			<div id="mensagem" style="margin-top: 25px; color: red;">${mensagem}</div>
 		</form>
 	</div>
 </body>

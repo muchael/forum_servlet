@@ -30,10 +30,16 @@ public class ForumService {
 	}
 	
 	public void login( Usuario usuario ) throws Exception {
-		Usuario usuarioRecuperado = ForumService.usuarioDAO.recuperar( usuario.getLogin() );
+		Usuario usuarioRecuperado = null; 
 		
-		if ( usuarioRecuperado == null || !usuarioRecuperado.getSenha().equals(usuario.getSenha() ) ) {
-			throw new Exception("Usuário e/ou senha inválido(s).");
+		try {
+			usuarioRecuperado = ForumService.usuarioDAO.recuperar( usuario.getLogin() );
+			
+		} catch (Exception e) {
+		} finally {
+			if ( usuarioRecuperado == null || !usuarioRecuperado.getSenha().equals(usuario.getSenha() ) ) {
+				throw new Exception("Usuário e/ou senha inválido(s).");
+			}
 		}
 	}
 	
